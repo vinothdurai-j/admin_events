@@ -27,20 +27,15 @@ app.use((req, res) => {
   res.status(404).json({ success: false, message: 'Route not found' });
 });
 
-// const PORT = process.env.PORT || 5000;
 
-// const startServer = async () => {
-//   await connectDB(); // 1. connect database
-//   await seedAdmin(); // 2. create default admin if needed
-//   app.listen(PORT, () => console.log(`Server running on port ${PORT}`)); // 3. start server
-// };
 
 const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
+  app.listen(PORT, '0.0.0.0', () => console.log(`Server running on port ${PORT}`));
+
   await connectDB();
   await seedAdmin();
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 };
 
 startServer().catch((err) => {
