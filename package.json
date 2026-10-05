@@ -1,0 +1,21 @@
+{
+  "name": "mini-event-management-backend",
+  "version": "1.0.0",
+  "description": "Mini Event Management System - Backend (Node, Express, MongoDB)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.5",
+    "express": "^4.22.3",
+    "joi": "^18.2.9",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.4",
+    "nodemon": "^3.1.14"
+  }
+}
