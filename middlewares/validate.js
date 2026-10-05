@@ -1,5 +1,5 @@
 // Runs a Joi schema on req.body / req.params / req.query.
-// Usage: validate(schema)  or  validate(schema, 'params')
+// //Usage: validate(schema)  or  validate(schema, 'params')
 const validate = (schema, property = 'body') => {
   return (req, res, next) => {
     const { error, value } = schema.validate(req[property], {
